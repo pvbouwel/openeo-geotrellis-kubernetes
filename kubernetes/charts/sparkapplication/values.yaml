@@ -22,6 +22,7 @@ driver:
   extraEnv: []
   # A priority class that can be used for the driver of the deployed spark application.
   # priorityClassName: <value>
+  podSecurityContext: {}
 # Executor parameters
 executor:
   # Number of cores allocated to executor

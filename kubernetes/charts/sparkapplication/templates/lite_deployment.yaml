@@ -50,9 +50,9 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ required "Please provide a rbac.serviceAccountDriver" .Values.rbac.serviceAccountDriver }}
-      {{- with .Values.podSecurityContext }}
+      {{- with .Values.driver.podSecurityContext }}
       securityContext:
-        {{- toYaml .Values.driver.podSecurityContext | indent 8 }}
+        {{- toYaml . | nindent 8 }}
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
