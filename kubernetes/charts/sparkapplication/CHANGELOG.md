@@ -1,5 +1,8 @@
 # sparkapplication chart changelog
 
+## 1.3.1
+- fix: make sure securityContext of the pod is passed on if provided under `driver.podSecurityContext`
+
 ## 1.3.0
 
 - feature: deployment of openeo-lite
